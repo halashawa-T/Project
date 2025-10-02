@@ -1,11 +1,13 @@
  <?php
+session_start();
 
+  $user_id = $_SESSION["authUser"]["id"];
 include "connectionondb.php";
 $sql = "SELECT news.id ,news.title, news.description, news.image, users.name AS user_name
         FROM news
         JOIN categories ON news.category_id = categories.id
        Left JOIN users ON news.user_id = users.id
-        WHERE news.status = 'deleted'";
+        WHERE news.status = 'deleted' AND news.user_id = $user_id";
 
 
  $result = $connection -> query($sql);
@@ -18,6 +20,7 @@ $sql = "SELECT news.id ,news.title, news.description, news.image, users.name AS 
  <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
 <title> View News Details</title>
   </head>
   <body> 

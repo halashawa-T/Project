@@ -20,6 +20,7 @@ $sql = "SELECT news.id ,news.title, news.description, news.image, users.name AS 
  <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
 <title> View News Details</title>
   </head>
   <body> 

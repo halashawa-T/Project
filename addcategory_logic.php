@@ -11,12 +11,10 @@ if ($connection -> error == false){
 
               $result = $connection -> query($sql);
 
-              
-if ($result == true){
-  echo "Added Succesfully";
-    }else{
-        echo "There was a problem in adding your category , kindly try again";
-    }
+              if($result == true){
+                 header("Location: viewcategory.php");
+              }
+
 
     }
 }

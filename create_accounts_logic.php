@@ -14,6 +14,9 @@ if ($connection -> error == false){
           $email = validate($_POST["email"]);
             $password = password_hash(validate($_POST["password"]), PASSWORD_BCRYPT);
               
+            if(empty($name) || empty($email) || empty($password)){
+              header("Location: create account.php");
+            }
 
 
               $sql = "INSERT INTO users(name , email , password) values ('$name','$email','$password')";

@@ -17,10 +17,8 @@ if ($connection -> error == false){
 
         $target_dir = "C:/xampp/htdocs/iug/uploads/" . $image_name;
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target_dir)) {
-        echo " Image uploaded successfully to: $target_dir<br>";
-    } else {
-        echo " Failed to move image<br>";
-    }
+         header("Location: viewnews.php");
+    } 
     }
 
   $user_id = $_SESSION["authUser"]["id"];

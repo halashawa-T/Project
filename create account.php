@@ -5,10 +5,12 @@
 <head>
   <meta charset="UTF-8">
 <title> create account</title>
+<link rel="stylesheet" href="style.css">
   </head>
   <body> 
+    <div class = "container">
     <center>         
-      <h1> Welcome creating account</h1>  
+      <h1> Welcome Create Account</h1>  
   <form action="create_accounts_logic.php" method="post">
 <input type="text" name="name" placeholder="name">
 <br>
@@ -22,5 +24,6 @@
 </center>
 
   </form>
+</div>
   </body>
 </html>

@@ -9,7 +9,9 @@ if ($connection -> error == false){
           $email = $_POST["email"];
             $password = $_POST["password"];
               
-
+ if(empty($email)){
+              header("Location: login.php");
+            }
 
               $sql = "SELECT * FROM users WHERE email = '$email'";
 

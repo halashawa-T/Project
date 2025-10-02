@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
 <title> Login</title>
+<link rel="stylesheet" href="style.css">
   </head>
   <body> 
+    <div class = "container">
     <center>         
       <h1> Hello to login page</h1>  
      
@@ -29,5 +31,6 @@
 </center>
 
   </form>
+    </div>
   </body>
 </html>

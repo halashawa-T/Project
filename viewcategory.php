@@ -13,6 +13,7 @@ $sql = "SELECT * FROM  categories";
 <head>
   <meta charset="UTF-8">
 <title> View Category</title>
+<link rel="stylesheet" href="style.css">
   </head>
   <body> 
    <table border=5px; >
